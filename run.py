@@ -3,7 +3,7 @@
 # Write your code to expect a terminal of 80 characters wide and 24 rows high
 import gspread
 from google.oauth2.service_account import Credentials
-from pprint import pprint
+# from pprint import pprint
 
 SCOPE = [
     "https://www.googleapis.com/auth/spreadsheets",
@@ -17,7 +17,7 @@ SHEET = GSPREAD_CLIENT.open('Love_Sandwiches')
 
 def get_sales_data():
     '''
-    Get sales figures input from user.
+    Get sales figures input from user
     Run while loop to collect a valid string of data from the user via the terminal, which must be a string of 6 numbers seperated 
     by commas. The loop will repeatedly request data until it is valid.
     '''
@@ -26,7 +26,7 @@ def get_sales_data():
         print('Data Should be six numbers, seperated by commas')
         print('example: 10,20,30,40,50,60\n')
 
-        data_str = input("Enter your data here:")
+        data_str = input("Enter your data here:\n")
 
         sales_data = data_str.split(',')
         validate_data(sales_data)
